@@ -13,4 +13,4 @@ RUN rm -rf /tmp/* && \
     rm -rf /var/cache/apt/* && \
     rm -rf /var/tmp/*
 
-CMD ["/usr/bin/telegraf"]
+ENTRYPOINT ["/usr/bin/telegraf"]
