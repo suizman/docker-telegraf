@@ -1,0 +1,12 @@
+version: '2'
+services:
+  influxdb:
+    image: tutum/influxdb
+    network_mode: host
+    environment:
+      - PRE_CREATE_DB=telegraf
+
+  telegraf:
+    image: suizman/telegraf
+    network_mode: host
+    command: -config /etc/telegraf/telegraf.conf
