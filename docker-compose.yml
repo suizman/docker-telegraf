@@ -10,3 +10,8 @@ services:
     image: suizman/telegraf
     network_mode: host
     command: -config /etc/telegraf/telegraf.conf
+
+  chronograf:
+    image: suizman/chronograf
+    network_mode: host
+

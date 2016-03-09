@@ -35,3 +35,7 @@ docker-compose up -d
 ### Access measurements in Influxdb
 
 * Open http://localhost:8083/ in you web browser and select telegraf db.
+
+### Access Chronograf
+
+* Open http://localhost:10000/ in you web browser and connect chronograf to influxdb.
