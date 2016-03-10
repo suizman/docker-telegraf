@@ -1,7 +1,7 @@
 version: '2'
 services:
   influxdb:
-    image: tutum/influxdb
+    image: tutum/influxdb:0.10
     network_mode: host
     environment:
       - PRE_CREATE_DB=telegraf
