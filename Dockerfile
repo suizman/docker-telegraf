@@ -1,12 +1,14 @@
-FROM ubuntu:15.10
+FROM ubuntu:16.04
 
-ENV PKG=telegraf_0.10.4.1-1_amd64.deb
+ENV PKG=telegraf-0.12.1-1_linux_amd64.tar.gz
+
+WORKDIR /
 
 # Get latest telegraf package
-ADD http://get.influxdb.org/telegraf/telegraf_0.10.4.1-1_amd64.deb /tmp
+ADD http://get.influxdb.org/telegraf/telegraf-0.12.1-1_linux_amd64.tar.gz /tmp
 
 # Install telegraf
-RUN dpkg -i /tmp/$PKG
+RUN tar xvf /tmp/$PKG
 
 # Clean stuff
 RUN rm -rf /tmp/* && \
